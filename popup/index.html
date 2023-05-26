@@ -5,19 +5,27 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <div id="popup-loading">
-      <div class="popup-loading-loader"></div>
-    </div>
     <div class="popup-container">
-      <label class="popup-label">Choose the anchor language:</label>
-      <hr class="popup-hr">
-      <select name="languages" id="languages">
-        <option value="English">English</option>
-        <option value="Swedish">Swedish</option>
-        <option value="Japanese">Japanese</option>
-        <option value="Finnish">Finnish</option>
-      </select>
-      <button id="popup-save-button">Save</button>
+      <div class="saved">
+        <h2>Saved! ✅</h2>
+      </div>
+      <header>
+        WordFinder 📚
+      </header>
+      <section class="popup-instructions">
+        <p>HOW TO USE</p>
+        <hr class="popup-hr">
+        <p>1. Select the language you want to study below. Click "Save".</p>
+        <p>2. Select a word on the web page, press right click and select "Search 'word' on Wiktionary".</p>
+      </section>
+      <section class="popup-language">
+        <label class="popup-label">Select Language</label>
+        <hr class="popup-hr">
+        <div class="anchor-option">
+          <select name="languages" id="languages" ></select>
+          <button id="popup-save-button">Save</button>
+        </div>
+      </section>
     </div>
     <script src="script.js"></script>
   </body>
