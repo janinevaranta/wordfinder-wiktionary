@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "wordfinder-wiktionary",
+  "description": "Search words from wiktionary with just a few clicks!",
+  "version": "0.0.1",
+  "icons": {
+    "64": "icons/icon.png"
+  },
+  "background": {
+    "scripts": [
+      "background_script.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": {
+      "64": "icons/icon.png"
+    },
+    "default_title": "WordFinder",
+    "default_popup": "popup/index.html"
+  },
+  "permissions": [
+    "menus",
+    "activeTab",
+    "storage"
+  ]
+}
