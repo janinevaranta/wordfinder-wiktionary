@@ -96,6 +96,17 @@ body {
   font-style: normal;
 }
 
+.highlight-context {
+  display: flex inline;
+  align-items: center;
+  gap: 2px;
+}
+
+.highlight-context > img {
+  width: 18px;
+
+}
+
 .highlight-search {
   background-color: rgb(135, 135, 135);
   padding: 2px;
