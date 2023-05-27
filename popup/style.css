@@ -1,3 +1,12 @@
+
+:root {
+  --container-color: #FFFAF9;
+  --text-color : #000577;
+  --background-color: #DDE7FF;
+  --highlight-color: #0043FF;
+  --highlight-text: #b6cdff;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -6,12 +15,42 @@ body {
   max-width: 300px;
 }
 
+.popup {
+  background-color: var(--background-color);
+}
+
+.popup-logos > .logo {
+  width: 70%;
+}
+
+.section {
+  background-color: var(--container-color);
+  color: var(--text-color);
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--text-color);
+}
+
 .popup-container {
   display: flex;
+  position: relative;
   gap: 2em;
   flex-direction: column;
   padding: 1em;
-  background-color: #f2f2ff;
+  z-index: 10;
+}
+
+.background-wave {
+  background-image: url("../images/background-wave.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
 }
 
 .saved {
@@ -37,29 +76,54 @@ body {
   width: 90%;
   border-style: solid;
   border-top: 0.2px;
-  border-color: #b8b8d8;
+  border-color: var(--background-color)
 }
 
 .popup-instructions {
-  background-color: #9898e7;
   padding: 1em;
   border-radius: 10px;
-  color: white;
 }
 
 .popup-instructions > p {
   font-weight: 300;
 }
 
+.highlight-save {
+  background-color: var(--highlight-color);
+  color: white;
+  padding: 3px;
+  border-radius: 5px;
+  font-style: normal;
+}
+
+.highlight-search {
+  background-color: rgb(135, 135, 135);
+  padding: 2px;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11pt;
+  margin-top: 5px;
+}
+
+.highlight-search > img {
+  height: 24px;
+  margin: 3px;
+  text-align: right;
+}
+
 .popup-language {
-  background-color: rgb(107, 107, 248);
   padding: 1em;
   border-radius: 10px;
   box-shadow: 2px 4px 5px #6b6b748b;
 }
 
-.popup-label {
-  color: white;
+.highlight-word {
+  background-color: var(--highlight-text);
+  padding: 3px;
+  font-style: normal;
 }
 
 .anchor-option {
@@ -77,17 +141,18 @@ body {
 }
 
 #popup-save-button {
-  border-style: solid;
+  border-style: none;
   border-color: #b8b8d8;
   border-radius: 5px;
-  background-color: #7b7bb8;
-  color: white;
+  background-color: var(--highlight-color);
+  box-shadow: 1px 2px 5px #6b6b748b;
   transition: transform 0.2s ease;
   font-size: 12pt;
+  color: white;
 }
 
 #popup-save-button:hover {
-  background-color: #515184;
+  background-color: #0030b3;
 }
 
 #popup-save-button:active {
