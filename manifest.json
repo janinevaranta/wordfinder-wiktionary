@@ -1,8 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "wordfinder-wiktionary",
-  "description": "Search words from wiktionary with just a few clicks!",
-  "version": "0.0.1",
+  "name": "w//ordfinder-wiktionary",
+  "description": "Search words from English Wiktionary with just a few clicks.",
+  "version": "1.0.0",
+  "author": "Jani Nevaranta",
   "icons": {
     "64": "icons/icon.png"
   },
@@ -15,7 +16,7 @@
     "default_icon": {
       "64": "icons/icon.png"
     },
-    "default_title": "WordFinder",
+    "default_title": "W//OrdFinder",
     "default_popup": "popup/index.html"
   },
   "permissions": [
