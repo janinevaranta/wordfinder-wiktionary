@@ -114,7 +114,7 @@ function createLanguageOptions(languagesList) {
       }
     );
 
-    languageOption.innerHTML = languagesList[i];
+    languageOption.textContent = languagesList[i];
     // Append the element to the input and list elements.
     document.querySelector("#languages").appendChild(
       languageOption
