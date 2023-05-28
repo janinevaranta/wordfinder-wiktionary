@@ -156,7 +156,6 @@ body {
   border-color: #b8b8d8;
   border-radius: 5px;
   background-color: var(--highlight-color);
-  box-shadow: 1px 2px 5px #6b6b748b;
   transition: transform 0.2s ease;
   font-size: 12pt;
   color: white;
