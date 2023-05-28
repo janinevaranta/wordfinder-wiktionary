@@ -1,6 +1,6 @@
 
 
-[W//Ordfinder Logo](images/wiiordfinder-logo-text.svg)
+![W//Ordfinder Logo](images/wiiordfinder-logo-text.png)
 
 #### Browser Extension for Mozilla Firefox for easy and quick word searches in English Wiktionary.
 
