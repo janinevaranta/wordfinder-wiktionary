@@ -6,6 +6,44 @@
  * This includes the  currently selected "anchor" language.
  */
 
+
+// Define list of languages
+// I wanted to do this "dynamically" but Firefox
+// wasn't so cooperative to my solutions.
+// I might try again in the future if the list expands a lot.
+const languagesList = [
+  "Arabic",
+  "Chinese",
+  "Czech",
+  "Dutch",
+  "English",
+  "Estonian",
+  "Finnish",
+  "French",
+  "German",
+  "Greek",
+  "Hebrew",
+  "Hindi",
+  "Icelandic",
+  "Indonesian",
+  "Italian",
+  "Irish",
+  "Japanese",
+  "Korean",
+  "Norwegian Bokmål",
+  "Norwegian Nynorsk",
+  "Polish",
+  "Portuguese",
+  "Russian",
+  "Sanskrit",
+  "Spanish",
+  "Swedish",
+  "Turkish",
+  "Ukranian",
+  "Vietnamese",
+  "Welsh"
+];
+
 // Load the settings.
 loadSettings();
 
@@ -13,20 +51,14 @@ loadSettings();
 const saveButton = document.querySelector("#popup-save-button");
 saveButton.addEventListener("click", saveSettings);
 
+// Make the English default.
 const DEFAULT_SETTINGS = {
   language: "English",
-  languagesList: [
-    "English",
-    "Japanese",
-    "Finnish",
-    "Swedish"
-  ]
 }
 
 async function loadSettings() {
   // Initiate variables.
   let language = "";
-  let languagesList = [];
 
   // Load the settings storage.
   const storage = await browser.storage.local.get();
@@ -35,11 +67,9 @@ async function loadSettings() {
   // Else use the default settings.
   if (Object.keys(storage).length > 0) {
     language = storage.language;
-    languagesList = storage.languagesList;
   } else {
     browser.storage.local.set(DEFAULT_SETTINGS);
     language = DEFAULT_SETTINGS.language;
-    languagesList = DEFAULT_SETTINGS.languagesList;
   }
 
   // Apply the settings.
@@ -55,13 +85,7 @@ async function saveSettings(e) {
   // Set the selected language and languages list to storage.
   const language = document.querySelector("#languages").value;
   browser.storage.local.set({
-    language: language,
-    languagesList: [
-      "English",
-      "Japanese",
-      "Finnish",
-      "Swedish"
-    ]
+    language: language
   });
   // Apply the language to the input element.
   setLanguage(language);
